@@ -1,0 +1,47 @@
+{
+  "change_message": "Baseline executive summary prompt.",
+  "created_at": "2026-03-12T01:06:36.762565Z",
+  "created_by": "demo-user",
+  "definition": {
+    "default_generation_params": {},
+    "default_model": {
+      "model": "mock-model",
+      "temperature": 0.1
+    },
+    "description": "Executive summary baseline.",
+    "metadata": {
+      "archived": false,
+      "commit_message": "Baseline executive summary prompt.",
+      "created_at": "2026-03-12T01:06:36.761566Z",
+      "created_by": "demo-user",
+      "deprecated": false,
+      "hypotheses": [],
+      "labels": [
+        "development"
+      ],
+      "notes": "",
+      "tags": [
+        "summary",
+        "executive"
+      ]
+    },
+    "name": "executive_summary",
+    "task_type": "summarization",
+    "template": "Summarize the following text for an executive audience in 3 bullet points.\nText: {{ document }}\n",
+    "variables": [
+      {
+        "default": null,
+        "description": "Source document",
+        "name": "document",
+        "required": true
+      }
+    ]
+  },
+  "immutable_id": "d1f2109c4691",
+  "linked_evaluations": [],
+  "linked_experiments": [],
+  "linked_runs": [],
+  "name": "executive_summary",
+  "parent_version": 2,
+  "version": 3
+}

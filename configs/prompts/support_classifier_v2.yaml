@@ -1,0 +1,26 @@
+name: support_classifier
+task_type: classification
+description: Candidate support routing prompt with explicit rubric.
+template: |
+  You are classifying customer support requests for routing.
+  Choose exactly one label: billing, technical, account, shipping.
+  Rules:
+  - billing: charges, refunds, invoices
+  - technical: bugs, crashes, app behavior
+  - account: login, password, profile, cancellation
+  - shipping: delivery, package status, address
+  Customer message: {{ customer_message }}
+  Answer with only the label.
+variables:
+  - name: customer_message
+    description: Customer request text
+    required: true
+default_model:
+  model: mock-model
+  temperature: 0.0
+metadata:
+  tags: ["support", "classification", "candidate"]
+  labels: ["candidate"]
+  created_by: demo-user
+  commit_message: Improve routing rubric and reduce ambiguity.
+

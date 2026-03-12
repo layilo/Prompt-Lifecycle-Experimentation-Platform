@@ -1,0 +1,17 @@
+name: support_classifier_tournament
+description: Compare baseline vs candidate prompt versions on support routing.
+prompt_name: support_classifier
+variants:
+  - id: baseline
+    version: 1
+  - id: candidate
+    version: 2
+dataset: data/golden/support_classifier.jsonl
+backend: mock
+repeats: 1
+metrics:
+  - exact_match
+  - pass_rate
+  - latency_ms
+  - total_cost
+

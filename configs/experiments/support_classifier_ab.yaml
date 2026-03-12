@@ -1,0 +1,15 @@
+name: support_classifier_ab
+prompt_name: support_classifier
+variants:
+  control:
+    version: 1
+    weight: 50
+  treatment:
+    version: 2
+    weight: 50
+sticky_by: user_id
+simulated_users: 200
+success_metric: thumbs_up_rate
+start_at: 2026-01-01T00:00:00Z
+end_at: 2026-12-31T23:59:59Z
+

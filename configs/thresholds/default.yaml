@@ -1,0 +1,7 @@
+pass_rate_min: 0.7
+accuracy_drop_max: 0.05
+latency_increase_ratio_max: 1.5
+token_increase_ratio_max: 1.4
+cost_increase_ratio_max: 1.4
+structured_validity_drop_max: 0.05
+

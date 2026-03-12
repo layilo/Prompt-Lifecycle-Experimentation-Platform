@@ -1,0 +1,11 @@
+version: "3.9"
+services:
+  prompt-platform:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    environment:
+      PROMPT_PLATFORM_PROFILE: local-demo
+    volumes:
+      - ./artifacts:/app/artifacts
+

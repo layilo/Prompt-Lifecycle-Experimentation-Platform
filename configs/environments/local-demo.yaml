@@ -1,0 +1,14 @@
+name: local-demo
+mode: mock
+storage_dir: artifacts
+db_path: artifacts/metadata.db
+default_backend: mock
+backend_configs:
+  mock:
+    provider: mock
+    seed: 11
+  openai:
+    provider: openai-compatible
+    base_url: https://api.openai.com/v1
+    api_key_env: OPENAI_API_KEY
+

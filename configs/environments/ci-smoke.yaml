@@ -1,0 +1,10 @@
+name: ci-smoke
+mode: mock
+storage_dir: artifacts/generated/ci_store
+db_path: artifacts/generated/ci_store/metadata.db
+default_backend: mock
+backend_configs:
+  mock:
+    provider: mock
+    seed: 19
+

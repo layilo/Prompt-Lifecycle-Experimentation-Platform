@@ -1,0 +1,5 @@
+{"id":"case-1","task_type":"classification","inputs":{"customer_message":"I was charged twice for my annual subscription."},"expected":"billing","metadata":{"difficulty":"easy"}}
+{"id":"case-2","task_type":"classification","inputs":{"customer_message":"The mobile app crashes every time I upload a file."},"expected":"technical","metadata":{"difficulty":"easy"}}
+{"id":"case-3","task_type":"classification","inputs":{"customer_message":"I can't reset my password and I am locked out."},"expected":"account","metadata":{"difficulty":"easy"}}
+{"id":"case-4","task_type":"classification","inputs":{"customer_message":"Where is my package? Tracking says delayed."},"expected":"shipping","metadata":{"difficulty":"easy"}}
+

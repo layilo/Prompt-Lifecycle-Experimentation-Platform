@@ -1,0 +1,19 @@
+name: executive_summary
+task_type: summarization
+description: Executive summary baseline.
+template: |
+  Summarize the following text for an executive audience in 3 bullet points.
+  Text: {{ document }}
+variables:
+  - name: document
+    description: Source document
+    required: true
+default_model:
+  model: mock-model
+  temperature: 0.1
+metadata:
+  tags: ["summary", "executive"]
+  labels: ["development"]
+  created_by: demo-user
+  commit_message: Baseline executive summary prompt.
+

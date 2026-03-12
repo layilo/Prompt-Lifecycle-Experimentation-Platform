@@ -1,0 +1,8 @@
+profiles:
+  mock-model:
+    input_token_cost: 0.000001
+    output_token_cost: 0.000002
+  openai:gpt-4o-mini:
+    input_token_cost: 0.00000015
+    output_token_cost: 0.0000006
+

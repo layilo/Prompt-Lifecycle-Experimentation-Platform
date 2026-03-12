@@ -1,0 +1,21 @@
+name: support_classifier
+task_type: classification
+description: Baseline support routing prompt.
+template: |
+  You are a customer support classifier.
+  Read the customer message and return exactly one label from:
+  billing, technical, account, shipping.
+  Message: {{ customer_message }}
+variables:
+  - name: customer_message
+    description: Customer request text
+    required: true
+default_model:
+  model: mock-model
+  temperature: 0.0
+metadata:
+  tags: ["support", "classification", "baseline"]
+  labels: ["development", "latest"]
+  created_by: demo-user
+  commit_message: Initial baseline classifier.
+

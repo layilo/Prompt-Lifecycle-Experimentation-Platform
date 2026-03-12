@@ -1,0 +1,48 @@
+{
+  "change_message": "Improve routing rubric and reduce ambiguity.",
+  "created_at": "2026-03-12T01:05:20.859117Z",
+  "created_by": "demo-user",
+  "definition": {
+    "default_generation_params": {},
+    "default_model": {
+      "model": "mock-model",
+      "temperature": 0.0
+    },
+    "description": "Candidate support routing prompt with explicit rubric.",
+    "metadata": {
+      "archived": false,
+      "commit_message": "Improve routing rubric and reduce ambiguity.",
+      "created_at": "2026-03-12T01:05:20.857118Z",
+      "created_by": "demo-user",
+      "deprecated": false,
+      "hypotheses": [],
+      "labels": [
+        "candidate"
+      ],
+      "notes": "",
+      "tags": [
+        "support",
+        "classification",
+        "candidate"
+      ]
+    },
+    "name": "support_classifier",
+    "task_type": "classification",
+    "template": "You are classifying customer support requests for routing.\nChoose exactly one label: billing, technical, account, shipping.\nRules:\n- billing: charges, refunds, invoices\n- technical: bugs, crashes, app behavior\n- account: login, password, profile, cancellation\n- shipping: delivery, package status, address\nCustomer message: {{ customer_message }}\nAnswer with only the label.\n",
+    "variables": [
+      {
+        "default": null,
+        "description": "Customer request text",
+        "name": "customer_message",
+        "required": true
+      }
+    ]
+  },
+  "immutable_id": "b43fb1a0fd64",
+  "linked_evaluations": [],
+  "linked_experiments": [],
+  "linked_runs": [],
+  "name": "support_classifier",
+  "parent_version": 1,
+  "version": 2
+}

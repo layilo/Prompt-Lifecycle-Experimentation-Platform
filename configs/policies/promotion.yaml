@@ -1,0 +1,10 @@
+require_manual_approval_for_prod: true
+prod_allowlist:
+  - alice
+  - platform-bot
+gates:
+  - eval_threshold
+  - regression
+  - structured_output
+  - abtest_optional
+

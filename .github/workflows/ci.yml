@@ -1,0 +1,31 @@
+name: ci
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install
+        run: |
+          python -m pip install --upgrade pip
+          pip install -e .[dev]
+      - name: Lint
+        run: ruff check src tests
+      - name: Test
+        run: pytest -q
+      - name: Smoke demo
+        run: python -m prompt_platform.cli demo run --profile ci-smoke --output-dir artifacts/generated/ci
+      - name: Regression check
+        run: python -m prompt_platform.cli regress check --baseline artifacts/generated/ci/evaluations/support_classifier_baseline.json --candidate artifacts/generated/ci/evaluations/support_classifier_candidate.json --threshold-config configs/thresholds/default.yaml --output artifacts/generated/ci/reports/regression_check.json
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: prompt-platform-artifacts
+          path: artifacts/generated/ci

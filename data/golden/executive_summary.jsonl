@@ -1,0 +1,1 @@
+{"id":"sum-1","task_type":"summarization","inputs":{"document":"Revenue grew 12 percent year over year while cloud margins expanded. Hiring slowed and two non-core projects were closed."},"expected":"Revenue grew 12 percent year over year. Cloud margins expanded. Hiring slowed and two non-core projects closed.","metadata":{}}
